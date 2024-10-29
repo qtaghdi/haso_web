@@ -1,7 +1,7 @@
-import axios, { AxiosInstance } from "axios";
+import axios, {AxiosInstance} from "axios";
 import Cookies from "js-cookie";
 import CONFIG from "@/config/config.json";
-import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY, REQUEST_TOKEN_KEY } from "@/constants/token/token.constants";
+import {ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY, REQUEST_TOKEN_KEY} from "@/constants/token/token.constants";
 
 // axios 인스턴스 생성
 export const MigbakCustomAxios: AxiosInstance = axios.create({
@@ -31,7 +31,7 @@ async function refreshAccessToken() {
     if (!refreshTokenPromise) {
         const refreshToken = Cookies.get(REFRESH_TOKEN_KEY);
         if (refreshToken) {
-            refreshTokenPromise = MigbakCustomAxios.post('/refresh-token', { refreshToken })
+            refreshTokenPromise = MigbakCustomAxios.post('/refresh-token', {refreshToken})
                 .then((response) => {
                     const newAccessToken = response.data.accessToken;
                     Cookies.set(ACCESS_TOKEN_KEY, newAccessToken);
@@ -66,7 +66,6 @@ MigbakCustomAxios.interceptors.response.use(
 
                 try {
                     const newAccessToken = await refreshAccessToken();
-                    
                     error.config.headers[REQUEST_TOKEN_KEY] = `Bearer ${newAccessToken}`;
                     return MigbakCustomAxios.request(error.config);
                 } catch (refreshError) {
@@ -77,7 +76,6 @@ MigbakCustomAxios.interceptors.response.use(
         } else {
             console.error('Network error or request timeout:', error);
         }
-
         return Promise.reject(error);
     }
 );
