@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from './token.constants'; // 상수 파일에서 가져오기
+import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from './token.constants';
 
 class Token {
     public getToken(key: string): string | undefined {
