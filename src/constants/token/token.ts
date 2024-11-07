@@ -1,4 +1,4 @@
-import Cookies from "js-cookie";
+import * as Cookies from 'js-cookie'
 import { ACCESS_TOKEN_KEY, REFRESH_TOKEN_KEY } from './token.constants';
 
 class Token {
