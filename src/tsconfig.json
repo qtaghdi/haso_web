@@ -24,7 +24,11 @@
       "@/*": ["src/*"]
     }
   },
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./@types"]
+  },
   "include": [
-    "./config"
+    "image.d.ts"
+
   ]
 }
