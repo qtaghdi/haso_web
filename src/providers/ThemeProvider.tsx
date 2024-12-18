@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { thema } from "@/design/theme";
+import { theme } from "@/design/theme";
 import GlobalStyles from "@/design/GlobalStyle"; // 선택: 글로벌 스타일 정의
 
 interface ThemeProviderProps {
@@ -9,7 +9,7 @@ interface ThemeProviderProps {
 
 function ThemeProvider({ children }: ThemeProviderProps) {
   return (
-    <StyledThemeProvider theme={thema}>
+    <StyledThemeProvider theme={theme}>
       <GlobalStyles />
       {children}
     </StyledThemeProvider>
