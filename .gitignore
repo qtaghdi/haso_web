@@ -11,6 +11,9 @@
 Icon
 .idea/
 
+# Storybook build directory
+storybook-static/
+
 
 # Thumbnails
 ._*
