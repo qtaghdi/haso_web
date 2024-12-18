@@ -2,7 +2,7 @@ import { Colors } from "@/design/color";
 import { FontList } from "@/assets/font/fontList";
 import { Shadow } from "@/design/shadow";
 
-export const thema = {
+export const theme = {
   colors: {
     Primary: Colors.Primary,
     Secondary: Colors.Secondary,

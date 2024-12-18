@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { thema } from "@/design/thema";
+import { thema } from "@/design/theme";
 import GlobalStyles from "@/design/GlobalStyle"; // 선택: 글로벌 스타일 정의
 
 interface ThemeProviderProps {
