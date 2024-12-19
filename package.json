@@ -1,79 +1,51 @@
 {
-  "name": "migbak_web",
-  "version": "0.1.0",
+  "name": "haso_web",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^22.10.2",
-    "@types/react-dom": "^18.3.1",
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.9",
-    "dotenv": "^16.4.7",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "firebase": "^11.0.1",
-    "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0",
-    "react-scripts": "5.0.1",
-    "react-toastify": "^11.0.1",
-    "styled-component": "^2.8.0",
-    "styled-components": "^6.1.13",
-    "toast": "^0.5.4",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx . --fix"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-router-dom": "^7.0.2",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@chromatic-com/storybook": "^3.2.2",
+    "@chromatic-com/storybook": "^3.2.3",
+    "@eslint/js": "^9.17.0",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/addons": "^7.6.17",
     "@storybook/blocks": "^8.4.7",
-    "@storybook/preset-create-react-app": "^8.4.7",
+    "@storybook/builder-vite": "^8.4.7",
     "@storybook/react": "^8.4.7",
-    "@storybook/react-webpack5": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
     "@storybook/test": "^8.4.7",
-    "@svgr/webpack": "^8.1.0",
-    "@types/js-cookie": "^3.0.6",
-    "@types/react": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.18.1",
-    "@typescript-eslint/parser": "^8.18.1",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.37.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-storybook": "^0.11.1",
-    "prettier": "^3.4.2",
-    "prop-types": "^15.8.1",
-    "react-native-dotenv": "^3.4.11",
+    "globals": "^15.13.0",
     "storybook": "^8.4.7",
-    "webpack": "^5.97.1"
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.1",
+    "vite": "^6.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
