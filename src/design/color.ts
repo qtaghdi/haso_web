@@ -43,11 +43,11 @@ const Text = {
   White: "#EAEAEA",
 };
 
-const Error = { Error: "#FF3C3C" };
+const Error = "#FF3C3C";
 
-const Black = { Black: "#000" };
+const Black = "#000";
 
-const White = { White: "#FFF" };
+const White = "#FFF";
 
 export const Colors = {
   Primary,

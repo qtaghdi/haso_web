@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: ${({theme}) => theme.colors.white};
         line-height: 1;
     }
+
     ${fonts}
     a {
         text-decoration: none;
