@@ -1,6 +1,5 @@
 import {createGlobalStyle} from "styled-components";
 import { fonts } from "./fonts";
-import {theme} from "@/design/theme";
 
 const GlobalStyles = createGlobalStyle`
     * {

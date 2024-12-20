@@ -1,5 +1,5 @@
 import React, {ReactNode} from "react";
-import {ThemeProvider as StyledThemeProvider} from "styled-components";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import GlobalStyles from "@/design/GlobalStyle";
 
 interface ThemeProviderProps {
