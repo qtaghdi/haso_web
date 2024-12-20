@@ -1,21 +1,21 @@
 {
-  "arrowParens": "always",               // 화살표 함수에서 괄호를 항상 사용
-  "bracketSameLine": false,              // JSX에서 닫는 태그를 새로운 줄에 배치
-  "bracketSpacing": true,                // 객체 리터럴에서 중괄호 사이에 공백 추가
-  "embeddedLanguageFormatting": "auto",  // HTML, CSS 내에서 코드 포맷팅을 자동으로 처리
-  "htmlWhitespaceSensitivity": "css",    // HTML의 공백 민감도를 CSS 규칙에 맞게 설정
-  "insertPragma": false,                 // @prettier 주석을 자동으로 삽입하지 않음
-  "jsxSingleQuote": false,               // JSX에서 큰 따옴표 사용
-  "printWidth": 80,                      // 한 줄 최대 길이를 80자로 설정
-  "proseWrap": "always",                 // 긴 텍스트는 항상 줄바꿈
-  "quoteProps": "as-needed",             // 객체 프로퍼티 이름에 따옴표를 필요할 때만 사용
-  "requirePragma": false,                // @prettier 주석이 없으면 포맷팅하지 않음
-  "semi": true,                          // 문장 끝에 세미콜론을 항상 추가
-  "singleAttributePerLine": false,       // JSX에서 속성을 한 줄에 여러 개 배치 가능
-  "singleQuote": false,                  // 문자열에 큰 따옴표 사용
-  "tabWidth": 2,                         // 탭 크기를 2로 설정
-  "trailingComma": "es5",                // ES5 표준에 맞게 마지막 항목 뒤에 쉼표 추가
-  "useTabs": false,                      // 들여쓰기를 공백으로 처리
-  "vueIndentScriptAndStyle": false,      // Vue의 <script>와 <style> 들여쓰기를 하지 않음
-  "endOfLine": "lf"                      // Unix 스타일의 줄 바꿈 (LF)
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "proseWrap": "always",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "singleAttributePerLine": false,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false,
+  "endOfLine": "lf"
 }
