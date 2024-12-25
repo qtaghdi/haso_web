@@ -1,8 +1,10 @@
-import { Colors } from "@/design/color";
-import { fonts } from "@/design/fonts";
-import { Shadow } from "@/design/shadow";
+// types/theme.ts
+import { Colors } from '@/design/color'
+import { fonts } from '@/design/fonts'
+import { Shadow } from '@/design/shadow'
 
-export const theme = {
+// 기본 theme 객체 정의
+const defaultTheme = {
   colors: {
     primary: Colors.Primary,
     secondary: Colors.Secondary,
@@ -13,7 +15,7 @@ export const theme = {
     error: Colors.Error,
   },
   typography: {
-    fonts: fonts,
+    fonts,
     fontSizes: {
       title: {
         1: "2.5rem",
@@ -40,5 +42,7 @@ export const theme = {
     },
   },
   shadow: Shadow,
-};
+} as const
 
+export type Theme = typeof defaultTheme
+export const theme = defaultTheme
