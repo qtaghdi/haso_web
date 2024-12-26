@@ -11,66 +11,57 @@ import PretendardExtraBold from "@/assets/font/Pretendard-ExtraBold.otf";
 import PretendardBlack from "@/assets/font/Pretendard-Black.otf";
 
 export const fonts = css`
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 100;
-    src: local("Pretendard-Thin"), url(${PretendardThin}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-Thin";
+        font-style: normal;
+        src: local("Pretendard-Thin"), url(${PretendardThin}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 200;
-    src: local("Pretendard-ExtraLight"), url(${PretendardExtraLight}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-ExtraLight";
+        font-style: normal;
+        src: local("Pretendard-ExtraLight"), url(${PretendardExtraLight}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Pretendard-Light"), url(${PretendardLight}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-Light";
+        font-style: normal;
+        src: local("Pretendard-Light"), url(${PretendardLight}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Pretendard-Regular"), url(${PretendardRegular}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-Regular";
+        font-style: normal;
+        src: local("Pretendard-Regular"), url(${PretendardRegular}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 500;
-    src: local("Pretendard-Medium"), url(${PretendardMedium}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-Medium";
+        font-style: normal;
+        src: local("Pretendard-Medium"), url(${PretendardMedium}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 600;
-    src: local("Pretendard-SemiBold"), url(${PretendardSemiBold}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-SemiBold";
+        font-style: normal;
+        src: local("Pretendard-SemiBold"), url(${PretendardSemiBold}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Pretendard-Bold"), url(${PretendardBold}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-Bold";
+        font-style: normal;
+        src: local("Pretendard-Bold"), url(${PretendardBold}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 800;
-    src: local("Pretendard-ExtraBold"), url(${PretendardExtraBold}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-ExtraBold";
+        font-style: normal;
+        src: local("Pretendard-ExtraBold"), url(${PretendardExtraBold}) format("opentype");
+    }
 
-  @font-face {
-    font-family: "Pretendard";
-    font-style: normal;
-    font-weight: 900;
-    src: local("Pretendard-Black"), url(${PretendardBlack}) format("opentype");
-  }
+    @font-face {
+        font-family: "Pretendard-Black";
+        font-style: normal;
+        src: local("Pretendard-Black"), url(${PretendardBlack}) format("opentype");
+    }
 `;
