@@ -43,7 +43,7 @@ export const Input = styled.input`
     border: 1px solid ${({ theme }) => theme.colors.gray[300]};
     border-radius: 5px;
     outline: none;
-    color: ${({ theme }) => theme.colors.gray[600]};
+    color: ${({ theme }) => theme.colors.text.Dark};
 
     &:focus {
         border-color: ${({ theme }) => theme.colors.primary[400]};

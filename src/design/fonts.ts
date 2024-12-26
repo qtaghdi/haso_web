@@ -15,62 +15,62 @@ export const fonts = css`
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 100;
-    src: local("Pretendard Thin"), url(${PretendardThin}) format("opentype");
+    src: local("Pretendard-Thin"), url(${PretendardThin}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 200;
-    src: local("Pretendard ExtraLight"), url(${PretendardExtraLight}) format("opentype");
+    src: local("Pretendard-ExtraLight"), url(${PretendardExtraLight}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 300;
-    src: local("Pretendard Light"), url(${PretendardLight}) format("opentype");
+    src: local("Pretendard-Light"), url(${PretendardLight}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 400;
-    src: local("Pretendard Regular"), url(${PretendardRegular}) format("opentype");
+    src: local("Pretendard-Regular"), url(${PretendardRegular}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 500;
-    src: local("Pretendard Medium"), url(${PretendardMedium}) format("opentype");
+    src: local("Pretendard-Medium"), url(${PretendardMedium}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 600;
-    src: local("Pretendard SemiBold"), url(${PretendardSemiBold}) format("opentype");
+    src: local("Pretendard-SemiBold"), url(${PretendardSemiBold}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 700;
-    src: local("Pretendard Bold"), url(${PretendardBold}) format("opentype");
+    src: local("Pretendard-Bold"), url(${PretendardBold}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 800;
-    src: local("Pretendard ExtraBold"), url(${PretendardExtraBold}) format("opentype");
+    src: local("Pretendard-ExtraBold"), url(${PretendardExtraBold}) format("opentype");
   }
 
   @font-face {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 900;
-    src: local("Pretendard Black"), url(${PretendardBlack}) format("opentype");
+    src: local("Pretendard-Black"), url(${PretendardBlack}) format("opentype");
   }
 `;
