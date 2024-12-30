@@ -1,0 +1,30 @@
+name: Qodana Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  qodana:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.11.0 # 프로젝트에 맞는 Node.js 버전 사용
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Qodana Analysis
+        uses: JetBrains/qodana-action@v2024.3
+        with:
+          linter: jetbrains/qodana-js:2024.3
+          upload-result: true
+          use-cache: true
