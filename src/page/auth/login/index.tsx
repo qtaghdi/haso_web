@@ -3,6 +3,7 @@ import * as S from "./style";
 import FormFiled from "@/components/form/filed";
 import Form from "@/components/form"
 import {useNavigate} from "react-router-dom";
+import LargeButton from "src/components/button/large";
 
 const Login = () => {
     const [id, setId] = useState<string>();
@@ -41,7 +42,7 @@ const Login = () => {
                     />
                 </S.FieldWrapper>
                 <S.LoginSection>
-                    <S.LoginButton>로그인</S.LoginButton>
+                    <LargeButton>로그인</LargeButton>
                     <S.Footer>
                         계정이 없으신가요? <S.SignUpLink onClick={handleSignUp}>회원가입</S.SignUpLink>
                     </S.Footer>
