@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Form = styled.form`
     width: 35vw;
-    height: 55vh;
+    //height: 55vh;
     padding: 1.563rem;
     border: 0.5vw solid;
     z-index: 1;

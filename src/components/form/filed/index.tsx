@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 interface FiledProps {
     label?: string;
+    name?: string;
     type?: string;
     placeholder?: string;
     value?: string;
@@ -11,7 +12,7 @@ interface FiledProps {
     error?: string;
 }
 
-const FormField = ({ label, type, placeholder, value, onChange, error }: FiledProps) => {
+const FormField = ({ label, name, type, placeholder, value, onChange, error }: FiledProps) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -24,6 +25,7 @@ const FormField = ({ label, type, placeholder, value, onChange, error }: FiledPr
             <S.InputWrapper>
                 <S.Input
                     type={type === "password" && passwordVisible ? "text" : type}
+                    name={name}
                     placeholder={placeholder}
                     value={value}
                     onChange={onChange}
