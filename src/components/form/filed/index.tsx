@@ -11,7 +11,7 @@ interface FiledProps {
     error?: string;
 }
 
-const FormFiled = ({ label, type, placeholder, value, onChange, error }: FiledProps) => {
+const FormField = ({ label, type, placeholder, value, onChange, error }: FiledProps) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -39,4 +39,4 @@ const FormFiled = ({ label, type, placeholder, value, onChange, error }: FiledPr
     );
 };
 
-export default FormFiled;
+export default FormField;
