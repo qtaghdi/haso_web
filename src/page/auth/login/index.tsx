@@ -1,9 +1,9 @@
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import * as S from "./style";
 import FormFiled from "@/components/form/filed";
 import Form from "@/components/form"
-import {useNavigate} from "react-router-dom";
-import LargeButton from "src/components/button/large";
+import LargeButton from "@/components/button/large";
 
 const Login = () => {
     const [id, setId] = useState<string>();
