@@ -29,6 +29,7 @@ const FormField = ({ label, name, type, placeholder, value, onChange, error }: F
                     placeholder={placeholder}
                     value={value}
                     onChange={onChange}
+                    autoCapitalize="off"
                 />
                 {type === "password" && (
                     <S.EyeIcon onClick={togglePasswordVisibility}>

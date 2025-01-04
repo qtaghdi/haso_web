@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -40,6 +41,7 @@ export const Input = styled.input`
     padding: 10px 15px;
     padding-right: 40px;
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+    background-color: ${({ theme }) => theme.colors.white};
     border: 1px solid ${({ theme }) => theme.colors.gray[300]};
     border-radius: 5px;
     outline: none;
@@ -55,6 +57,13 @@ export const Input = styled.input`
         font-family: "Pretendard-Medium";
     }
 
+    &:autofill {
+        background-color: ${({ theme }) => theme.colors.white};
+        box-shadow: 0 0 0px 1000px ${({ theme }) => theme.colors.white} inset;
+        -webkit-text-fill-color: ${({ theme }) => theme.colors.text.Dark};
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
     @media (max-width: 768px) {
         padding: 8px 12px;
         font-size: ${({ theme }) => theme.typography.fontSizes.body[2]};
@@ -65,6 +74,7 @@ export const Input = styled.input`
         font-size: ${({ theme }) => theme.typography.fontSizes.caption[1]};
     }
 `;
+
 
 export const EyeIcon = styled.div`
     position: absolute;
