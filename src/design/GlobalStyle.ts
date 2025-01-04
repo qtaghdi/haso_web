@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { fonts } from "./fonts";
 
 const GlobalStyles = createGlobalStyle`
@@ -9,9 +9,10 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: ${({theme}) => theme.typography.fonts["Pretendard-medium"]};
-        color: ${({theme}) => theme.colors.text.Dark};
-        background-color: ${({theme}) => theme.colors.white};
+        font-family: ${({ theme }) =>
+          theme.typography.fonts["Pretendard-medium"]};
+        color: ${({ theme }) => theme.colors.text.Dark};
+        background-color: ${({ theme }) => theme.colors.white};
         line-height: 1;
     }
 
@@ -19,6 +20,19 @@ const GlobalStyles = createGlobalStyle`
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    .swal-container {
+        z-index: 9999;
+    }
+
+    .swal-popup {
+        position: relative;
+        z-index: 9999;
+    }
+
+    .swal2-container {
+        z-index: 9999 !important;
     }
 `;
 
