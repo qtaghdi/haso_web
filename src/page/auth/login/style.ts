@@ -76,7 +76,7 @@ export const FieldWrapper = styled.div`
     display: flex;
     padding: 0.625rem;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.2rem;
 `
 
 
@@ -87,25 +87,8 @@ export const LoginSection = styled.div`
     padding: 0.625rem;
     align-items: center;
     justify-content: center;
+    margin-top: 1.2rem;
     gap: 1.2rem;
-`;
-
-export const LoginButton = styled.button`
-    width: 100%;
-    padding: 10px 15px;
-    background: ${({ theme }) => theme.colors.primary[400]};
-    color: ${({ theme }) => theme.colors.white};
-    font-family: "Pretendard-Bold";
-    font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    
-    &:hover {
-        background: ${({ theme }) => theme.colors.primary[500]};
-        color: ${({ theme }) => theme.colors.primary[200]};
-    }
 `;
 
 export const Footer = styled.div`

@@ -67,7 +67,7 @@ export const Description = styled.p`
     font-family: "Pretendard-Medium";
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
     color: ${({ theme }) => theme.colors.text.Light};
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
 `;
 
 
@@ -76,7 +76,7 @@ export const FieldWrapper = styled.div`
     display: flex;
     padding: 0.625rem;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.2rem;
 `
 
 export const StepIndicator = styled.div`
@@ -118,6 +118,7 @@ export const LoginSection = styled.div`
     padding: 0.625rem;
     align-items: center;
     justify-content: center;
+    margin-top: 1.2rem;
     gap: 1.2rem;
 `;
 
