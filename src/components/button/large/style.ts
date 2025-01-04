@@ -6,7 +6,7 @@ export const Button = styled.button`
     background: ${({ theme }) => theme.colors.primary[400]};
     color: ${({ theme }) => theme.colors.white};
     font-family: "Pretendard-Bold";
-    font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+    font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     border: none;
     border-radius: 5px;
     cursor: pointer;
