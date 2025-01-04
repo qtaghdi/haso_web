@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Button = styled.button<{ variant: 'primary' | 'secondary' }>`
-    width: 50%;
+    width: 200px;
     padding: 10px 15px;
     color: ${({ theme }) => theme.colors.white};
     font-family: "Pretendard-Bold";
@@ -24,9 +24,18 @@ export const Button = styled.button<{ variant: 'primary' | 'secondary' }>`
         background: ${theme.colors.white};
         color: ${theme.colors.black};
         border: 1px solid ${theme.colors.black};
-        
+
         &:hover {
             background: ${theme.colors.gray[300]};
         }
     `}
+}
+
+    @media (max-width: 1440px) { // 맥 해상도
+        width: 30vw;
+    }
+
+    @media (min-width: 1441px) { // 윈도우 조정
+        width: 200px;
+    }
 `;
