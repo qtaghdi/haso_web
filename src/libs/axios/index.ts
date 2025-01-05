@@ -85,6 +85,11 @@ class AxiosService {
   public deleteData<T>(endpoint: string, params: any): Promise<T> {
     return this.axiosInstance.delete(endpoint, { params }).then((response) => response.data);
   }
+
+  // PATCH 요청 함수
+  public patchData<T>(endpoint: string, data: any): Promise<T> {
+    return this.axiosInstance.patch(endpoint, data).then((response) => response.data);
+  }
 }
 
 const hasoAxios = new AxiosService();
