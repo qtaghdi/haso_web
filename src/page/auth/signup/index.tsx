@@ -5,7 +5,7 @@ import { SIGNUP_STEPS } from "./steps";
 import { useNavigate } from "react-router-dom";
 import { SignUpProps } from "@/type/auth/index.type";
 import LargeButton from "@/components/button/large";
-import MiddleButton from "@/components/button/middle";
+import MediumButton from "@/components/button/medium";
 import { Toast } from "@/libs/toast";
 
 const SignUp = () => {
@@ -126,13 +126,13 @@ const SignUp = () => {
         <S.LoginSection>
           <S.ButtonSection>
             {currentStep > 0 && (
-              <MiddleButton 
+              <MediumButton 
                 type="button"
                 variant="secondary" 
                 onClick={handlePrev}
               >
                 이전
-              </MiddleButton>
+              </MediumButton>
             )}
             {currentStep === 0 ? (
               <LargeButton
@@ -142,13 +142,13 @@ const SignUp = () => {
                 다음
               </LargeButton>
             ) : currentStep < SIGNUP_STEPS.length - 1 ? (
-              <MiddleButton
+              <MediumButton
                 type="submit"
                 variant="primary"
                 disabled={!isCurrentStepValid()}
               >
                 다음
-              </MiddleButton>
+              </MediumButton>
             ) : (
               <LargeButton
                 type="submit"
