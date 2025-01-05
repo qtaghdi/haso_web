@@ -53,21 +53,30 @@ const SignUp = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // 필드 값이 맞지 않으면 Toast 띄우기
     if (!isCurrentStepValid()) {
       Toast("error", `올바른 정보를 입력해주세요. (단계 ${currentStep + 1})`);
       return;
     }
 
+    // 비밀번호 일치 체크 (1단계에서만 체크)
     if (currentStep === 0 && formData.password !== formData.passwordConfirm) {
       Toast("error", "비밀번호가 일치하지 않습니다.");
       return;
     }
 
+    // 전화번호와 인증번호 체크 (2단계에서만 체크)
+    if (currentStep === 1 && (!formData.tel || !formData.telAccess)) {
+      Toast("error", "전화번호 및 인증번호를 채워주세요.");
+      return;
+    }
+
+    // 단계가 끝나면 완료 후 로그인 화면으로 이동
     if (currentStep < SIGNUP_STEPS.length - 1) {
       setCurrentStep((prev) => prev + 1);
     } else {
       Toast("success", "회원가입이 완료되었습니다!");
-      navigate("/login");
+      navigate("/");
     }
   };
 
@@ -128,9 +137,15 @@ const SignUp = () => {
                 이전
               </MediumButton>
             )}
-            <LargeButton type="submit" disabled={!isCurrentStepValid()}>
-              {currentStep < SIGNUP_STEPS.length - 1 ? "다음" : "완료"}
-            </LargeButton>
+            {currentStep === 0 ? (
+              <LargeButton type="submit" disabled={!isCurrentStepValid()}>
+                {currentStep < SIGNUP_STEPS.length - 1 ? "다음" : "완료"}
+              </LargeButton>
+            ) : (
+              <MediumButton variant="primary" type="submit" disabled={!isCurrentStepValid()}>
+                {currentStep < SIGNUP_STEPS.length - 1 ? "다음" : "완료"}
+              </MediumButton>
+            )}
           </S.ButtonSection>
           <S.Footer>
             계정이 있으신가요?{" "}
