@@ -21,19 +21,6 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
-
-    .swal-container {
-        z-index: 9999;
-    }
-
-    .swal-popup {
-        position: relative;
-        z-index: 9999;
-    }
-
-    .swal2-container {
-        z-index: 9999 !important;
-    }
 `;
 
 export default GlobalStyles;
