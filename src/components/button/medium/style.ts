@@ -11,25 +11,26 @@ export const Button = styled.button<{ variant: 'primary' | 'secondary' }>`
     cursor: pointer;
     transition: background 0.3s;
 
-    ${({ variant, theme }) => variant === 'primary' && css`
-        background: ${theme.colors.primary[400]};
+    ${({ variant, theme }) => css`
+        ${variant === 'primary' && css`
+            background: ${theme.colors.primary[400]};
 
-        &:hover {
-            background: ${theme.colors.primary[500]};
-            color: ${theme.colors.primary[200]};
-        }
+            &:hover {
+                background: ${theme.colors.primary[500]};
+                color: ${theme.colors.primary[200]};
+            }
+        `}
+
+        ${variant === 'secondary' && css`
+            background: ${theme.colors.white};
+            color: ${theme.colors.black};
+            border: 1px solid ${theme.colors.black};
+
+            &:hover {
+                background: ${theme.colors.gray[300]};
+            }
+        `}
     `}
-
-    ${({ variant, theme }) => variant === 'secondary' && css`
-        background: ${theme.colors.white};
-        color: ${theme.colors.black};
-        border: 1px solid ${theme.colors.black};
-
-        &:hover {
-            background: ${theme.colors.gray[300]};
-        }
-    `}
-}
 
     @media (max-width: 1440px) { // 맥 해상도
         width: 30vw;
