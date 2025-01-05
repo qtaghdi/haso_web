@@ -1,6 +1,5 @@
 import React from "react";
-import FormField from "@/components/form/filed";
-import { Toast } from "@/libs/toast";
+import LargeField from "@/components/filed/large";
 import { StepProps } from "./index";
 import { FormGap } from "@/page/auth/signup/steps/style";
 
@@ -11,14 +10,14 @@ const One = ({ signUp, onChange }: StepProps) => {
   };
   return (
     <FormGap>
-      <FormField
+      <LargeField
         label="아이디"
         name="id"
         placeholder="아이디를 입력해주세요."
         value={signUp.id}
         onChange={onChange}
       />
-      <FormField
+      <LargeField
         label="비밀번호"
         name="password"
         placeholder="비밀번호를 입력해주세요."
@@ -26,7 +25,7 @@ const One = ({ signUp, onChange }: StepProps) => {
         value={signUp.password}
         onChange={onChange}
       />
-      <FormField
+      <LargeField
         label="비밀번호 확인"
         name="passwordConfirm"
         placeholder="비밀번호를 재확인해주세요"

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import * as S from "./style";
-import FormFiled from "@/components/form/filed";
+import LargeFiled from "@/components/filed/large";
 import Form from "@/components/form"
 import LargeButton from "@/components/button/large";
 
@@ -27,13 +27,13 @@ const Login = () => {
                     <S.Description>하소를 원활하게 이용하기 위해 로그인 해주세요.</S.Description>
                 </S.TitleBox>
                 <S.FieldWrapper>
-                    <FormFiled
+                    <LargeFiled
                         label="아이디"
                         placeholder="아이디를 입력해주세요."
                         value={id}
                         onChange={(e) => setId(e.target.value)}
                     />
-                    <FormFiled
+                    <LargeFiled
                         label="비밀번호"
                         placeholder="비밀번호를 입력해주세요."
                         type="password"

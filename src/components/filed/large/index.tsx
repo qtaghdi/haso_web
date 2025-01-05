@@ -12,7 +12,7 @@ interface FiledProps {
     error?: string;
 }
 
-const FormField = ({ label, name, type, placeholder, value, onChange, error }: FiledProps) => {
+const LargeField = ({ label, name, type, placeholder, value, onChange, error }: FiledProps) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -42,4 +42,4 @@ const FormField = ({ label, name, type, placeholder, value, onChange, error }: F
     );
 };
 
-export default FormField;
+export default LargeField;
