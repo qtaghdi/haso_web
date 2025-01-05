@@ -25,6 +25,13 @@ const SignUp = () => {
 
   const CurrentStepComponent = SIGNUP_STEPS[currentStep]?.component;
 
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    if (window.location.search) {
+      window.history.replaceState({}, "", currentPath);
+    }
+  }, []);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     const isValidField = (field: string): field is keyof SignUpProps =>
@@ -45,21 +52,22 @@ const SignUp = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    e.stopPropagation();
-    
-    // 폼 제출 전에 현재 URL의 쿼리 파라미터 제거
-    const currentPath = window.location.pathname;
-    window.history.replaceState({}, '', currentPath);
-    
-    if (currentStep === 0) {
-      if (formData.password !== formData.passwordConfirm) {
-        Toast("error", "비밀번호가 일치하지 않습니다.");
-        return;
-      }
+
+    if (!isCurrentStepValid()) {
+      Toast("error", `올바른 정보를 입력해주세요. (단계 ${currentStep + 1})`);
+      return;
     }
-  
-    if (currentStep < SIGNUP_STEPS.length - 1 && isCurrentStepValid()) {
+
+    if (currentStep === 0 && formData.password !== formData.passwordConfirm) {
+      Toast("error", "비밀번호가 일치하지 않습니다.");
+      return;
+    }
+
+    if (currentStep < SIGNUP_STEPS.length - 1) {
       setCurrentStep((prev) => prev + 1);
+    } else {
+      Toast("success", "회원가입이 완료되었습니다!");
+      navigate("/login");
     }
   };
 
@@ -70,22 +78,8 @@ const SignUp = () => {
   };
 
   const handleLogin = () => {
-    navigate("/login");
+    navigate("/");
   };
-
-  // URL 쿼리 파라미터 제거 함수
-  const cleanupQueryParams = () => {
-    const currentPath = window.location.pathname;
-    window.history.replaceState({}, '', currentPath);
-  };
-
-  // 컴포넌트 마운트/언마운트 시 URL 정리
-  useEffect(() => {
-    cleanupQueryParams();
-    return () => {
-      cleanupQueryParams();
-    };
-  }, []);
 
   return (
     <S.Wrapper>
@@ -126,37 +120,17 @@ const SignUp = () => {
         <S.LoginSection>
           <S.ButtonSection>
             {currentStep > 0 && (
-              <MediumButton 
+              <MediumButton
                 type="button"
-                variant="secondary" 
+                variant="secondary"
                 onClick={handlePrev}
               >
                 이전
               </MediumButton>
             )}
-            {currentStep === 0 ? (
-              <LargeButton
-                type="submit"
-                disabled={!isCurrentStepValid()}
-              >
-                다음
-              </LargeButton>
-            ) : currentStep < SIGNUP_STEPS.length - 1 ? (
-              <MediumButton
-                type="submit"
-                variant="primary"
-                disabled={!isCurrentStepValid()}
-              >
-                다음
-              </MediumButton>
-            ) : (
-              <LargeButton
-                type="submit"
-                disabled={!isCurrentStepValid()}
-              >
-                완료
-              </LargeButton>
-            )}
+            <LargeButton type="submit" disabled={!isCurrentStepValid()}>
+              {currentStep < SIGNUP_STEPS.length - 1 ? "다음" : "완료"}
+            </LargeButton>
           </S.ButtonSection>
           <S.Footer>
             계정이 있으신가요?{" "}
