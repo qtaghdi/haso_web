@@ -2,7 +2,7 @@ import * as S from './style';
 import { ButtonStyle } from "@/type/button/button.type";
 import { PropsWithChildren } from 'react';
 
-const SmallButton = ({ children, onClick, disabled, variant, type }: PropsWithChildren<ButtonStyle>) => {
+const MiddleButton = ({ children, onClick, disabled, variant, type }: PropsWithChildren<ButtonStyle>) => {
   return (
     <S.Button onClick={onClick} disabled={disabled} variant={variant} type={type}>
       {children}
@@ -10,4 +10,4 @@ const SmallButton = ({ children, onClick, disabled, variant, type }: PropsWithCh
   )
 }
 
-export default SmallButton;
+export default MiddleButton;
