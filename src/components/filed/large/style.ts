@@ -46,6 +46,7 @@ export const Input = styled.input`
     border-radius: 5px;
     outline: none;
     color: ${({ theme }) => theme.colors.text.Dark};
+    caret-color: ${({ theme }) => theme.colors.primary[400]};
 
     &:focus {
         border-color: ${({ theme }) => theme.colors.primary[400]};
