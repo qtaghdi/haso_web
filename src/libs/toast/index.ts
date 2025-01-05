@@ -1,22 +1,14 @@
-import Swal from 'sweetalert2';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./style.css";
 
-const Toast = (icon: 'success' | 'error' | 'info', message: string) => {
-  Swal.fire({
-    icon,
-    title: message,
-    toast: true,
-    position: 'top-right',
-    timer: 2000,
-    timerProgressBar: true,
-    showCloseButton: true,
-    showConfirmButton: false,
-    customClass: {
-      container: 'swal-container',
-      popup: 'swal-popup'
-    },
-    didOpen: (toast) => {
-      toast.style.zIndex = '9999';
-    }
+const Toast = (type: "success" | "error" | "info", message: string) => {
+  const progressColorClass = `progress-${type}`;
+
+  toast(message, {
+    type,
+    className: "toast-container",
+    progressClassName: progressColorClass,
   });
 };
 
