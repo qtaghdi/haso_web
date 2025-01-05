@@ -1,16 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as S from "./style";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-
-interface FiledProps {
-    label?: string;
-    name?: string;
-    type?: string;
-    placeholder?: string;
-    value?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    error?: string;
-}
+import { FiledProps } from "@/type/field/field.type";
 
 const LargeField = ({ label, name, type, placeholder, value, onChange, error }: FiledProps) => {
     const [passwordVisible, setPasswordVisible] = useState(false);
