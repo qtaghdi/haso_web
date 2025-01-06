@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as S from "./style"; // 스타일 파일
+import * as S from "./style";
 import { FormGap } from "@/page/auth/signup/steps/style";
 import FormField from "@/components/filed/large";
 import { StepProps } from "./index";
@@ -7,7 +7,7 @@ import SmallButton from "@/components/button/medium";
 import Modal from "@/modal/auth";
 import { FaTimes } from "react-icons/fa"; // X 아이콘
 
-const Three = ({ signUp, onChange }: StepProps) => {
+const Three = ({ signUp,validate, onChange }: StepProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
@@ -55,21 +55,21 @@ const Three = ({ signUp, onChange }: StepProps) => {
               label="사업자 등록번호"
               name="business_registration_number"
               placeholder="사업자 등록번호를 입력해주세요."
-              value={signUp.b_no}
+              value={validate?.b_no}
               onChange={onChange}
             />
             <FormField
               label="개업 일자"
               name="business_start_date"
               placeholder="개업 일자를 입력해주세요."
-              value={signUp.start_dt}
+              value={validate?.start_dt}
               onChange={onChange}
             />
             <FormField
               label="대표자 성명"
               name="ceo_name"
               placeholder="대표자 성명을 입력해주세요."
-              value={signUp.p_nm}
+              value={validate?.p_nm}
               onChange={onChange}
             />
           </S.ModalBody>
