@@ -17,9 +17,10 @@ const SignUp = () => {
     passwordConfirm: "",
     tel: "",
     telAccess: "",
-    business_name: "",
+    store_name: "",
     store_no: "",
     fax_no: "",
+    business_no: "", 
   });
   const navigate = useNavigate();
 
@@ -142,7 +143,11 @@ const SignUp = () => {
                 {currentStep < SIGNUP_STEPS.length - 1 ? "다음" : "완료"}
               </LargeButton>
             ) : (
-              <MediumButton variant="primary" type="submit" disabled={!isCurrentStepValid()}>
+              <MediumButton
+                variant="primary"
+                type="submit"
+                disabled={!isCurrentStepValid()}
+              >
                 {currentStep < SIGNUP_STEPS.length - 1 ? "다음" : "완료"}
               </MediumButton>
             )}
