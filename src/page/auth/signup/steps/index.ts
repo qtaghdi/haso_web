@@ -6,6 +6,7 @@ import { SignUpProps, ValidateProps } from "@/type/auth/index.type";
 
 export interface StepProps {
     signUp: SignUpProps;
+    validate?: ValidateProps;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
