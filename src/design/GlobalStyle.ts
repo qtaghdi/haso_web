@@ -21,6 +21,9 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+    li {
+        list-style-type: none;
+    }
 `;
 
 export default GlobalStyles;
