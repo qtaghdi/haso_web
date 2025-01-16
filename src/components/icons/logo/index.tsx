@@ -1,4 +1,4 @@
-import Logo from "@/assets/image/logo/Logo.svg?react";
+import Logo from "@/assets/icons/logo/Logo.svg?react";
 import { IconProps } from "@/type/icons/icons.type";
 
 const LogoIcons = ({ width, height, fill, className }: IconProps) => {

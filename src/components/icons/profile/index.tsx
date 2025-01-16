@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Profile from "@/assets/image/profile/Profile.svg?react";
+import Profile from "@/assets/icons/profile/Profile.svg?react";
 import { IconProps } from "@/type/icons/icons.type";
 
 const IconWrapper = styled(Profile)<IconProps>`
