@@ -1,4 +1,4 @@
-import Search from "@/assets/image/search/Search.svg?react";
+import Search from "@/assets/icons/search/search.svg?react";
 import { IconProps } from "@/type/icons/icons.type";
 
 const SearchIcon = ({ width, height, fill, className }: IconProps) => {
