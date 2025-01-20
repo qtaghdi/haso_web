@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    font-family: "Pretendard-Bold"
 `
 
 export const More = styled.div`
@@ -14,12 +15,10 @@ export const More = styled.div`
 `
 
 export const DescriptionText = styled.div`
-    font-family: "Pretendard-Bold";
     font-size: ${({theme}) => theme.typography.fontSizes.heading[1]};
 `
 
 export const MoreText = styled.h4`
-    font-family: "Pretendard-Bold";
     font-size: ${({theme}) => theme.typography.fontSizes.heading[2]};
 
 `
