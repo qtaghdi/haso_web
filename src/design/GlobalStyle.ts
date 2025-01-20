@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: ${({ theme }) =>
-            theme.typography.fonts["Pretendard-medium"]};
+            theme.typography.fonts["Pretendard-Medium"]};
             color: ${({ theme }) => theme.colors.text.Dark};
             background-color: ${({ theme }) => theme.colors.white};
             line-height: 1;
