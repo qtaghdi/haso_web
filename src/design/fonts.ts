@@ -1,18 +1,18 @@
 import { css } from "styled-components";
 
-import PretendardThin from "@/assets/font/Pretendard-Thin.otf";
-import PretendardExtraLight from "@/assets/font/Pretendard-ExtraLight.otf";
-import PretendardLight from "@/assets/font/Pretendard-Light.otf";
-import PretendardRegular from "@/assets/font/Pretendard-Regular.otf";
-import PretendardMedium from "@/assets/font/Pretendard-Medium.otf";
-import PretendardSemiBold from "@/assets/font/Pretendard-SemiBold.otf";
-import PretendardBold from "@/assets/font/Pretendard-Bold.otf";
-import PretendardExtraBold from "@/assets/font/Pretendard-ExtraBold.otf";
-import PretendardBlack from "@/assets/font/Pretendard-Black.otf";
+import PretendardThin from "@/assets/font/pretendard/Pretendard-Thin.otf";
+import PretendardExtraLight from "@/assets/font/pretendard/Pretendard-ExtraLight.otf";
+import PretendardLight from "@/assets/font/pretendard/Pretendard-Light.otf";
+import PretendardRegular from "@/assets/font/pretendard/Pretendard-Regular.otf";
+import PretendardMedium from "@/assets/font/pretendard/Pretendard-Medium.otf";
+import PretendardSemiBold from "@/assets/font/pretendard/Pretendard-SemiBold.otf";
+import PretendardBold from "@/assets/font/pretendard/Pretendard-Bold.otf";
+import PretendardExtraBold from "@/assets/font/pretendard/Pretendard-ExtraBold.otf";
+import PretendardBlack from "@/assets/font/pretendard/Pretendard-Black.otf";
 
 import kjcGothicBold from "@/assets/font/kjcGothic/kjcGothic-Bold.otf";
-import kjcGothicMedium from "@/assets/font/kjcGothic/kjcGothic-Medium.otf";
 import kjcGothicRegular from "@/assets/font/kjcGothic/kjcGothic-Regular.otf";
+import kjcGothicLight from "@/assets/font/kjcGothic/kjcGothic-Light.otf";
 
 export const fonts = css`
   @font-face {
@@ -79,15 +79,16 @@ export const fonts = css`
     src: local("KjcGothic-Bold"), url(${kjcGothicBold}) format("opentype");
   }
 
-  @font-face {
-    font-family: "KjcGothic-Medium";
-    font-style: normal;
-    src: local("KjcGothic-Medium"), url(${kjcGothicMedium}) format("opentype");
-  }
-
+  
   @font-face {
     font-family: "KjcGothic-Regular";
     font-style: normal;
-    src: local("KjcGothic-Regular"), url(${kjcGothicBold}) format("opentype");
+    src: local("KjcGothic-Regular"), url(${kjcGothicRegular}) format("opentype");
+  }
+
+  @font-face {
+    font-family: "KjcGothic-Light";
+    font-style: normal;
+    src: local("KjcGothic-Medium"), url(${kjcGothicLight}) format("opentype");
   }
 `;
