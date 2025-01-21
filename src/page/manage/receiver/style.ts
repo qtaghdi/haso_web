@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProviderAll = styled.div`
-    /* height: 200vh; */
+    /* height: 120vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,6 +102,7 @@ export const ReceiverBottom = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8.5vh;
 `;
 export const ReceiverTables = styled.div`
 `;
@@ -114,7 +115,6 @@ export const TradeTop = styled.table`
 
   th {
     background-color: #e8e8e8;
-    border-left: 1px solid #d1d1d1;
     border-right: 1px solid #d1d1d1;
     padding: 2vh;
     text-align: center;
@@ -124,34 +124,36 @@ export const TradeTop = styled.table`
 
   td {
     background-color: white;
-    border-left: 1px solid #d1d1d1;
     border-right: 1px solid #d1d1d1;
     text-align: center;
     padding: 2vh;
     font-size: 16px;
     font-weight: 500;
   }
-  th:first-child, td:first-child {
+  th:first-child,
+  td:first-child {
     border-left: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
-  th:last-child, td:last-child {
+  th:last-child,
+  td:last-child {
     border-right: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
 `;
 
-export const TableMiddle = styled.thead`
-  table-layout: fixed;
-  border-collapse: collapse;
+export const TableMiddle = styled.table`
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5vh;
   td {
-    width: 9.55vw;
+    width: 10vw;
     background-color: white;
     text-align: center;
-    padding: 2vh;
     font-size: 16px;
     font-weight: 500;
   }
@@ -159,7 +161,7 @@ export const TableMiddle = styled.thead`
   th {
     background-color: #e8e8e8;
     border-right: 1px solid #d1d1d1;
-    padding: 2vh;
+    padding: 2vh 0.1vw;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -173,16 +175,15 @@ export const TableMiddle = styled.thead`
   td:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    }
+  }
 `;
-export const TableBottom = styled.thead`
-  table-layout: fixed;
-  border-collapse: collapse;
-  display: flex;
-  margin-top: 1.5vh;
-  margin-bottom: 7vh;
+export const TableBottom = styled.table`
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
   td {
-    width: 23.5vw;
+    width: 24vw;
     background-color: white;
     text-align: center;
     padding: 2vh;
@@ -191,10 +192,9 @@ export const TableBottom = styled.thead`
   }
 
   th {
-    width: 13vw;
     background-color: #e8e8e8;
     border-right: 1px solid #d1d1d1;
-    padding: 2vh;
+    padding: 2vh 2vw;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -208,5 +208,5 @@ export const TableBottom = styled.thead`
   td:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    }
+  }
 `;
