@@ -22,6 +22,9 @@ const BusinessHistory = () => {
   const handleGoBack = () => {
     navigate(-1);
   };
+  const handleAddBusiness = () => {
+    navigate(`/addBusiness`);
+  };
 
   return (
     <S.BusinessHistoryAll>
@@ -39,7 +42,7 @@ const BusinessHistory = () => {
           onClick={() => handleTransactionClick(transaction.id)} // 클릭 이벤트 전달
         />
       ))}
-      <AddBtn />
+      <AddBtn onClick={handleAddBusiness} />
     </S.BusinessHistoryAll>
   );
 };
