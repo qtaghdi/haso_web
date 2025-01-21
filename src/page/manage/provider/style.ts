@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const ProviderAll = styled.div`
-    height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f8f8f8;
-  row-gap: 4vh;
+  row-gap: 4.5vh;
 `;
 
 export const ProviderTop = styled.div`
@@ -64,9 +64,14 @@ export const ContentsSpans = styled.span`
   font-family: Kim jung chul Gothic;
 `;
 export const TradeDate = styled.span`
+  padding: 0.3vw;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   font-weight: bold;
   font-family: Kim jung chul Gothic;
+  border-bottom: 1px solid #d1d1d1;
 `;
 export const ClientsInfos = styled.div`
   display: flex;
@@ -93,8 +98,7 @@ export const ProviderBottom = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const ProviderTables = styled.div`
-`;
+export const ProviderTables = styled.div``;
 
 export const TradeTop = styled.table`
   width: 100%;
@@ -121,13 +125,15 @@ export const TradeTop = styled.table`
     font-size: 16px;
     font-weight: 500;
   }
-  th:first-child, td:first-child {
+  th:first-child,
+  td:first-child {
     border-left: none;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
 
-  th:last-child, td:last-child {
+  th:last-child,
+  td:last-child {
     border-right: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -163,14 +169,14 @@ export const TableMiddle = styled.thead`
   td:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    }
+  }
 `;
 export const TableBottom = styled.thead`
   table-layout: fixed;
   border-collapse: collapse;
   display: flex;
   margin-top: 1.5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
   td {
     width: 23.5vw;
     background-color: white;
@@ -198,5 +204,5 @@ export const TableBottom = styled.thead`
   td:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    }
+  }
 `;

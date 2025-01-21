@@ -41,7 +41,6 @@ const Statement = () => {
       </S.StatementTopArea>
       <ManageProduct text={'공급자용'} date={'2025.01.06'} onClick={() => handleSelection("receiver")} />
       <ManageProduct text={'공급받는자용'} date={'2025.01.06'} onClick={() => handleSelection("provider")} />
-      <AddBtn />
     </S.StatementAll>
   );
 };

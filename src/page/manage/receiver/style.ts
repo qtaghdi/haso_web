@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const ProviderAll = styled.div`
-    height: 100vh;
+    /* height: 200vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #f8f8f8;
-  row-gap: 4vh;
+  row-gap: 4.5vh;
 `;
 
 export const ProviderTop = styled.div`
@@ -47,7 +47,7 @@ export const StatementVector = styled.img`
 export const ProviderMiddle = styled.div`
   background-color: white;
   width: 75vw;
-  height: 45vh;
+  height: 40vh;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -64,9 +64,14 @@ export const ContentsSpans = styled.span`
   font-family: Kim jung chul Gothic;
 `;
 export const TradeDate = styled.span`
+  padding: 0.3vw;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   font-weight: bold;
   font-family: Kim jung chul Gothic;
+  border-bottom: 1px solid #d1d1d1;
 `;
 export const TradeDates = styled.div`
   display: flex;
@@ -83,7 +88,7 @@ export const ClientsInfosGroups = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 33vw;
+  width: 32vw;
 `;
 export const FontsArea = styled.div`
   display: flex;
@@ -175,7 +180,7 @@ export const TableBottom = styled.thead`
   border-collapse: collapse;
   display: flex;
   margin-top: 1.5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
   td {
     width: 23.5vw;
     background-color: white;
