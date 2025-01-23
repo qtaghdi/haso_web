@@ -1,9 +1,17 @@
+import React from "react";
 import * as S from "./style";
 import LogoIcons from "@/components/icons/logo";
-import { Search, ChevronDown } from 'lucide-react';
 import ProfileIcon from "@/components/icons/profile";
+import CustomDropdown from "@/components/dropdown";
 
 const Header = () => {
+  const handleSelect = (value: string) => {
+    console.log("선택한 값:", value);
+  };
+
+  const 지역옵션 = ["서울", "부산", "대구"];
+  const 품종옵션 = ["고등어", "갈치", "참치"];
+
   return (
     <S.HeaderWrapper>
       <S.HeaderContainer>
@@ -15,22 +23,16 @@ const Header = () => {
           <S.SearchContainer>
             <S.SearchInput placeholder="검색어를 입력해주세요" />
             <S.ButtonGroup>
-              <S.DropdownButton>
-                지역
-                <ChevronDown size={16} style={{ marginLeft: '4px' }} />
-              </S.DropdownButton>
-              <S.DropdownButton>
-                품종
-                <ChevronDown size={16} style={{ marginLeft: '4px' }} />
-              </S.DropdownButton>
+              <CustomDropdown options={지역옵션} onSelect={handleSelect} text="지역 선택" />
+              <CustomDropdown options={품종옵션} onSelect={handleSelect} text="품종 선택" />
             </S.ButtonGroup>
           </S.SearchContainer>
         </S.SearchSection>
 
         <S.Navigation>
-          <S.NavLink /* href="#" */>상품 등록</S.NavLink>
-          <S.NavLink /* href="#" */>채팅</S.NavLink>
-          <S.NavLink /* href="#" */>거래처 관리</S.NavLink>
+          <S.NavLink>상품 등록</S.NavLink>
+          <S.NavLink>채팅</S.NavLink>
+          <S.NavLink>거래처 관리</S.NavLink>
           <ProfileIcon size="small" />
         </S.Navigation>
       </S.HeaderContainer>

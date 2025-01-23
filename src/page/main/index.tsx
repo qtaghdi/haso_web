@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import * as S from "./style";
 
-import Header from "@/components/header";
+import Header from "@/components/common/header";
 import Slide from "@/components/slide";
 import TabBar from "@/components/tapbar";
 import ProductCard from "@/components/product/card";
