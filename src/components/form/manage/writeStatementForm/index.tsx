@@ -1,22 +1,22 @@
 import { useState } from "react";
 import * as S from "./style";
 
-const WriteCunsumerStatement = () => {
+const WriteConsumerStatement = () => {
   const [tableData, setTableData] = useState(
-    Array(10).fill({
+    Array.from({ length: 10 }, () => ({
       item: "",
       spec: "",
       quantity: "",
       unitPrice: "",
       supplyAmount: "",
       taxAmount: "",
-    })
+    }))
   );
 
-  const handleInputChange = (index, value) => {
-    const updatedData = [...tableData];
-    updatedData[index][field] = value;
-    setTableData(updatedData);
+  const handleInputChange = (index, field, value) => {
+    setTableData((prevData) =>
+      prevData.map((row, i) => (i === index ? { ...row, [field]: value } : row))
+    );
   };
 
   return (
@@ -71,44 +71,19 @@ const WriteCunsumerStatement = () => {
             </tr>
           </thead>
           <tbody>
-            {tableData.map((index) => (
+            {tableData.map((row, index) => (
               <tr key={index}>
-                <td>
-                  <input
-                    type="text"
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                  />
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    onChange={(e) => handleInputChange(index, e.target.value)}
-                  />
-                </td>
+                {Object.keys(row).map((field) => (
+                  <td key={field}>
+                    <input
+                      type="text"
+                      value={row[field]}
+                      onChange={(e) =>
+                        handleInputChange(index, field, e.target.value)
+                      }
+                    />
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
@@ -158,4 +133,4 @@ const WriteCunsumerStatement = () => {
   );
 };
 
-export default WriteCunsumerStatement;
+export default WriteConsumerStatement;
