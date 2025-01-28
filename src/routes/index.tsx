@@ -11,23 +11,21 @@ import ReceiverPage from "@/page/manage/receiver";
 import AddClient from "@/page/manage/addClient";
 import AddBusiness from "@/page/manage/addBusiness";
 
-const Router = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={paths.login} element={<Login />} />
-        <Route path={paths.signup} element={<SignUp />} />
-          <Route path={paths.main} element={<Main />} />
-          <Route path={paths.clientList} element={<ClientList/>} />
-          <Route path={paths.businessHistory} element={<BusinessHistory/>} />
-          <Route path={paths.statement} element={<Statement/>} />
-          <Route path={paths.statementProvider} element={<ProviderPage/>} />
-          <Route path={paths.statementReceiver} element={<ReceiverPage/>} />
-          <Route path={paths.addClient} element={<AddClient/>} />
-          <Route path={paths.addBusiness} element={<AddBusiness/>} />
-      </Routes>
-    </BrowserRouter>
-  );
-};
+const Router = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path={paths.login} element={<Login />} />
+      <Route path={paths.signup} element={<SignUp />} />
+      <Route path={paths.main} element={<Main />} />
+      <Route path={paths.clientList} element={<ClientList />} />
+      <Route path={paths.businessHistory} element={<BusinessHistory />} />
+      <Route path={paths.statement} element={<Statement />} />
+      <Route path={paths.statementProvider} element={<ProviderPage />} />
+      <Route path={paths.statementReceiver} element={<ReceiverPage />} />
+      <Route path={paths.addClient} element={<AddClient />} />
+      <Route path={paths.addBusiness} element={<AddBusiness />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default Router;

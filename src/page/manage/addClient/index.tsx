@@ -1,26 +1,39 @@
 import { useState } from "react";
-import SearchUser from "@/components/searchUser";
 import * as S from "./style";
+import SearchUser from "@/components/searchUser";
+import Modal from "@/modal/search";
+
+// 사용자 타입 정의
+type User = {
+  id: number;
+  name: string;
+};
 
 const AddClient = () => {
   const [searchQuery, setSearchQuery] = useState(""); // 검색어 상태 관리
-  const [filteredUsers, setFilteredUsers] = useState([]); // 필터링된 사용자 목록
+  const [filteredUsers, setFilteredUsers] = useState<User[]>([]); // 필터링된 사용자 목록 (타입 명시)
+  const [isModalOpen, setIsModalOpen] = useState(false); // 모달 열기/닫기 상태
 
-  const users = [
+  const users: User[] = [
     { id: 1, name: "홍길동" },
     { id: 2, name: "김철수" },
     { id: 3, name: "이영희" },
     { id: 4, name: "박지민" },
-    // 이 부분은 실제 API나 데이터를 통해 가져올 수 있습니다.
+    { id: 5, name: "박시현" },
   ];
 
-  const handleSearch = (query) => {
+  const handleSearch = (query: string) => {
     setSearchQuery(query);
     // 이름을 기준으로 필터링
     const filtered = users.filter((user) =>
       user.name.toLowerCase().includes(query.toLowerCase())
     );
-    setFilteredUsers(filtered);
+    setFilteredUsers(filtered); // 타입 오류 해결
+    setIsModalOpen(true); // 검색 후 모달 열기
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // 모달 닫기
   };
 
   return (
@@ -29,20 +42,7 @@ const AddClient = () => {
         <S.SearchUser>
           <S.InfoTitles>사용자 검색</S.InfoTitles>
           <SearchUser onSearch={handleSearch} />
-          <S.UserList>
-          {filteredUsers.length > 0 ? (
-            filteredUsers.map((user) => (
-              <S.UserItem key={user.id}>
-                <S.UserName>{user.name}</S.UserName>
-              </S.UserItem>
-            ))
-          ) : (
-            // <S.NoResults>검색 결과가 없습니다.</S.NoResults>
-            ""
-          )}
-        </S.UserList>
         </S.SearchUser>
-
         <S.ClientInfo>
           <S.InfoTitles>거래처 정보</S.InfoTitles>
           <S.ClientInfos>
@@ -69,7 +69,13 @@ const AddClient = () => {
           </S.ClientInfos>
         </S.ClientInfo>
       </S.AddClientContentsArea>
-      {/* 버튼 컴포넌트 가져와서 추가 및 서버 연결하기 */}
+
+      {/* 모달 창 */}
+      {isModalOpen && (
+        <Modal users={filteredUsers} onClose={closeModal} />
+      )}
+
+      {/* 버튼 컴포넌트 추가 및 서버 연결 */}
     </S.AddClientAll>
   );
 };

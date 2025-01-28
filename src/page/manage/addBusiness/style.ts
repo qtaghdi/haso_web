@@ -5,12 +5,11 @@ export const AddBusiness = styled.div`
   flex-direction: column;
   align-items: center;
   height: 190vh;
-  background-color: #F8F8F8;
+  background-color: ${({ theme }) => theme.colors.gray[100]};
   gap: 4.5vh;
 `;
 export const AddBusinessTitle = styled.span`
-    margin-top: 13vh;
-  font-size: 40px;
-  font-weight: bold;
-
+  margin-top: 13vh;
+  font-size: ${({ theme }) => theme.typography.fontSizes.Title[1]};
+  font-family: "Pretendard-Bold";
 `;

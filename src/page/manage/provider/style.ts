@@ -5,7 +5,7 @@ export const ProviderAll = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: ${({ theme }) => theme.colors.gray[100]};
   row-gap: 4.5vh;
 `;
 
@@ -24,14 +24,14 @@ export const ProviderTopOfTop = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.Title[1]};
+  font-family: "Pretendard-Bold";
   margin-bottom: 5vh;
 `;
 
 export const ProviderHeader = styled.span`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
+  font-family: "Pretendard-Bold";
 `;
 
 export const StatementVector = styled.img`
@@ -45,7 +45,7 @@ export const StatementVector = styled.img`
 `;
 
 export const ProviderMiddle = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   width: 75vw;
   height: 40vh;
   border-radius: 10px;
@@ -56,8 +56,8 @@ export const ProviderMiddle = styled.div`
 `;
 
 export const TitleSpans = styled.span`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
+  font-family: "Pretendard-Bold"; /* 폰트 수정 필요 */
 `;
 export const ContentsSpans = styled.span`
   font-size: 16px;
@@ -70,8 +70,8 @@ export const TradeDate = styled.span`
   justify-content: center;
   font-size: 18px;
   font-weight: bold;
-  font-family: Kim jung chul Gothic;
-  border-bottom: 1px solid #d1d1d1;
+  font-family: "KimJungChulGothic"; /* 폰트 수정 필요 */
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray[500]};
 `;
 export const ClientsInfos = styled.div`
   display: flex;
@@ -108,21 +108,21 @@ export const TradeTop = styled.table`
   table-layout: fixed;
 
   th {
-    background-color: #e8e8e8;
-    border-right: 1px solid #d1d1d1;
+    background-color: ${({ theme }) => theme.colors.gray[400]};
+    border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
     padding: 2vh;
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
+    font-family: "Pretendard-Bold";
   }
 
   td {
-    background-color: white;
-    border-right: 1px solid #d1d1d1;
+    background-color: ${({ theme }) => theme.colors.white};
+    border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
     text-align: center;
     padding: 2vh;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+    font-family: "Pretendard-Medium";
   }
   th:first-child,
   td:first-child {
@@ -146,19 +146,19 @@ export const TableMiddle = styled.table`
   margin-bottom: 1.5vh;
   td {
     width: 10vw;
-    background-color: white;
+    background-color: ${({ theme }) => theme.colors.white};
     text-align: center;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+    font-family: "Pretendard-Medium";
   }
 
   th {
-    background-color: #e8e8e8;
-    border-right: 1px solid #d1d1d1;
+    background-color: ${({ theme }) => theme.colors.gray[400]};
+    border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
     padding: 2vh 0.1vw;
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
+    font-family: "Pretendard-Bold";
   }
 
   th:first-child {
@@ -178,20 +178,20 @@ export const TableBottom = styled.table`
 
   td {
     width: 24vw;
-    background-color: white;
+    background-color: ${({ theme }) => theme.colors.white};
     text-align: center;
     padding: 2vh;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+    font-family: "Pretendard-Medium";
   }
 
   th {
-    background-color: #e8e8e8;
-    border-right: 1px solid #d1d1d1;
+    background-color: ${({ theme }) => theme.colors.gray[400]};
+    border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
     padding: 2vh 2vw;
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
+    font-family: "Pretendard-Bold";
   }
 
   th:first-child {

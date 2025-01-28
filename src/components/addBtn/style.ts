@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AddBtnBack = styled.div`
-    background-color: #327DFF;
+    background-color: ${({theme}) => theme.colors.primary[400]};
     width: 6.5vw;
     height: 6.5vw;
     border-radius: 100px;

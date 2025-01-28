@@ -13,8 +13,8 @@ export const ClientListTopArea = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 27px;
-    font-weight: 600;
+    font-size: ${({ theme }) => theme.typography.fontSizes.Title[3]};
+    font-family: "Pretendard-Bold";
 `;
 
 export const WasteImg = styled.img`

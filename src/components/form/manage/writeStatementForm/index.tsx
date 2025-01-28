@@ -1,8 +1,9 @@
 import { useState } from "react";
 import * as S from "./style";
+import { TableProps } from "@/type/manageTable/index.type";
 
 const WriteConsumerStatement = () => {
-  const [tableData, setTableData] = useState(
+  const [tableData, setTableData] = useState<TableProps[]>(
     Array.from({ length: 10 }, () => ({
       item: "",
       spec: "",
@@ -13,9 +14,15 @@ const WriteConsumerStatement = () => {
     }))
   );
 
-  const handleInputChange = (index, field, value) => {
+  const handleInputChange = (
+    index: number,
+    field: keyof TableProps,
+    value: string
+  ) => {
     setTableData((prevData) =>
-      prevData.map((row, i) => (i === index ? { ...row, [field]: value } : row))
+      prevData.map((row, i) =>
+        i === index ? { ...row, [field]: value } : row
+      )
     );
   };
 
@@ -77,9 +84,9 @@ const WriteConsumerStatement = () => {
                   <td key={field}>
                     <input
                       type="text"
-                      value={row[field]}
+                      value={row[field as keyof TableProps]}
                       onChange={(e) =>
-                        handleInputChange(index, field, e.target.value)
+                        handleInputChange(index, field as keyof TableProps, e.target.value)
                       }
                     />
                   </td>

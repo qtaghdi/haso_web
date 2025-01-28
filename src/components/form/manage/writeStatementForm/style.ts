@@ -13,8 +13,8 @@ export const TradeDate = styled.span`
   justify-content: center;
   font-size: 18px;
   font-weight: bold;
-  font-family: Kim jung chul Gothic;
-  border-bottom: 1px solid #d1d1d1;
+  font-family: "KimJungChulGothic"; /* 폰트 수정필요 */
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray[500]};
 `;
 export const TradeDates = styled.div`
   display: flex;
@@ -47,15 +47,15 @@ export const Container = styled.div`
 
 export const ContentsSpans = styled.span`
   font-size: 16px;
-  font-family: Kim jung chul Gothic;
+  font-family: "KimJungChulGothic"; /* 폰트 수정필요 */
 `;
 
 export const TitleSpans = styled.span`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
+  font-family: "Pretendard-Bold";
 `;
 export const AddBusinessMiddle = styled.div`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   width: 75vw;
   height: 40vh;
   border-radius: 10px;
@@ -75,8 +75,8 @@ export const Table1 = styled.table`
     background-color: #f4f4f4;
 
     th {
-      background-color: #e8e8e8;
-      border-right: 1px solid #d1d1d1;
+      background-color: ${({ theme }) => theme.colors.gray[400]};
+      border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
       padding: 1vw;
       text-align: center;
       font-size: 20px;
@@ -95,8 +95,8 @@ export const Table1 = styled.table`
 
   tbody {
     td {
-      background-color: white;
-      border-right: 1.5px solid #d1d1d1;
+      background-color: ${({ theme }) => theme.colors.white};
+      border-right: 1.5px solid ${({ theme }) => theme.colors.gray[500]};
       text-align: center;
       font-size: 16px;
       font-weight: 500;
@@ -126,15 +126,16 @@ export const AddressInput = styled.input`
   height: 5.5vh;
   padding: 1vw;
   border-radius: 5px;
-  border: 1px solid #a9a9a9;
-  font-size: 16px;
+  border: 1px solid ${({ theme }) => theme.colors.gray[600]};
+  font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+  font-family: "Pretendard-Medium";
   ::placeholder {
     color: #ababab;
   }
 `;
 export const SecondTitle = styled.span`
-  font-size: 24px;
-  font-weight: bold;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
+  font-family: "Pretendard-Bold";
 `;
 
 export const Table2 = styled.table`
@@ -147,13 +148,13 @@ export const Table2 = styled.table`
     background-color: #f4f4f4;
 
     th {
-      background-color: #e8e8e8;
-      border-right: 1px solid #d1d1d1;
+      background-color: ${({ theme }) => theme.colors.gray[400]};
+      border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
       padding-left: 0.5vw;
       padding-right: 0.5vw;
       text-align: center;
-      font-size: 17px;
-      font-weight: 600;
+      font-size: ${({ theme }) => theme.typography.fontSizes.heading[4]};
+      font-family: "Pretendard-Semibold";
     }
     th:last-child {
       border-right: none;
@@ -165,7 +166,7 @@ export const Table2 = styled.table`
       border-top-left-radius: 5px;
     }
     td {
-      background-color: white;
+      background-color: ${({ theme }) => theme.colors.white};
       text-align: center;
       font-size: 16px;
       font-weight: 500;
@@ -199,13 +200,13 @@ export const Table3 = styled.table`
 
     th {
       width: 10vw;
-      background-color: #e8e8e8;
-      border-right: 1px solid #d1d1d1;
+      background-color: ${({ theme }) => theme.colors.gray[400]};
+      border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
       padding-left: 0.5vw;
       padding-right: 0.5vw;
       text-align: center;
-      font-size: 17px;
-      font-weight: 600;
+      font-size: ${({ theme }) => theme.typography.fontSizes.heading[4]};
+      font-family: "Pretendard-Semibold";
     }
     th:last-child {
       border-right: none;
@@ -217,16 +218,17 @@ export const Table3 = styled.table`
       border-top-left-radius: 5px;
     }
     td {
-      background-color: white;
+      background-color: ${({ theme }) => theme.colors.white};
       text-align: center;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+      font-family: "Pretendard-Medium";
 
       input {
         width: 100%;
         height: 5.5vh;
         border: none;
-        font-size: 16px;
+        font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+        font-family: "Pretendard-Medium";
         text-align: center;
       }
     }

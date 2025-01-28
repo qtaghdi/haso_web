@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AddClientAll = styled.div`
-  background-color: #f8f8f8;
+  background-color: ${({ theme }) => theme.colors.gray[100]};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ export const ClientInfos = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   gap: 5vw;
 `;
@@ -49,39 +49,40 @@ export const ClientInfoOne = styled.div`
   align-items: flex-end;
 `;
 export const InfoTitles = styled.span`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
+  font-family: "Pretendard-Bold";
 `;
 export const InfoContents = styled.span`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+  font-family: "Pretendard-Medium";
 `;
 
 // UserList 스타일 (검색창 바로 아래에 표시될 목록)
 export const UserList = styled.ul`
   width: 55vw;
   list-style: none;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
   top: 24vh;
 `;
 
 export const UserItem = styled.li`
   padding: 1vw;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
+  font-family: "Pretendard-Medium";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #BFD7FF;
-  border-right: 1px solid #BFD7FF;
-  border-left: 1px solid #BFD7FF;;
+  border-top: 1px solid #bfd7ff;
+  border-right: 1px solid #bfd7ff;
+  border-left: 1px solid #bfd7ff;
   &:last-child {
-    border-bottom: 1px solid #BFD7FF;
+    border-bottom: 1px solid #bfd7ff;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
   }
   &:hover {
-    background-color: #f1f1f1;
+    background-color: ${({ theme }) => theme.colors.gray[200]};
     cursor: pointer;
   }
 `;

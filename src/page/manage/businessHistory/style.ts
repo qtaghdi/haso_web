@@ -17,8 +17,8 @@ export const HistoryListTopArea = styled.div`
 
 export const BusinessFontArea = styled.div`
     width: 22vw;
-    font-size: 27px;
-    font-weight: 600;
+    font-size: ${({ theme }) => theme.typography.fontSizes.Title[3]};
+    font-family: "Pretendard-Bold";
     display: flex;
     align-items: center;
     justify-content: space-between;
