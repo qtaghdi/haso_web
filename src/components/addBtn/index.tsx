@@ -2,12 +2,9 @@ import * as S from "./style";
 import plusImg from "@/assets/image/plus.svg";
 import { ButtonProps } from "@/type/button/button.type";
 
-interface AddBtnProps extends ButtonProps {
-}
-
-const AddBtn = ({ onClick }: AddBtnProps) => {
+const AddBtn = ({ onClick, disabled }: PropsWithChildren<ButtonProps>) => {
   return (
-    <S.AddBtnBack onClick={onClick}>
+    <S.AddBtnBack onClick={onClick} disabled={disabled}>
       <S.AddBtnImg src={plusImg} />
     </S.AddBtnBack>
   );

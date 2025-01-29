@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as S from "./style";
-import { TableProps } from "@/type/manageTable/index.type";
+import { TableProps } from "@/type/manage/table/index.type";
 
 const WriteConsumerStatement = () => {
   const [tableData, setTableData] = useState<TableProps[]>(
